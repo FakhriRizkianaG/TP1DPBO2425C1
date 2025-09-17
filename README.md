@@ -1,6 +1,11 @@
 # TP1DPBO2425C1
 TP 1 Frizkia (Fakhri Rizkiana)
 
+Saya Fakhri Rizkiana Sya'ban Kusnendar dengan NIM 2405534 mengerjakan<br> 
+TP 1 dalam mata kuliah Desain dan Pemrograman<br>
+Berorientasi Objek untuk keberkahanNya maka saya tidak<br>
+melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.<br>
+
 Program ini bertujuan untuk mendata barang-barang/stok yang tersedia di toko elektronik.
 
 program ini menggunakan kelas yang bernama BarangElektronik dengan atribut sbb:<br>

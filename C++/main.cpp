@@ -1,12 +1,11 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include "BarangElektronik.cpp"
 using namespace std;
 
 int main() {
-    const int MAX_BARANG = 999;
-    BarangElektronik stok[MAX_BARANG];
-    int jumlahBarang = 0;
+    vector<BarangElektronik> stok;
     int pilihan;
 
     do {
@@ -20,14 +19,14 @@ int main() {
         cout << "Pilih menu: ";
         cin >> pilihan;
 
-         switch (pilihan) {
+        switch (pilihan) {
         case 1: { // Tampilkan stok
             cout << "\n=== Daftar Stok Barang ===\n";
-            if (jumlahBarang == 0) {
+            if (stok.empty()) {
                 cout << "Belum ada barang yang tersimpan.\n";
             } else {
                 int i = 0;
-                while (i < jumlahBarang) {
+                while (i < stok.size()) {
                     cout << "\nBarang ke-" << i + 1 << ":\n";
                     stok[i].tampilkanInfo();
                     i++;
@@ -41,7 +40,7 @@ int main() {
             cin >> idCari;
             bool ditemukan = false;
             int i = 0;
-            while (i < jumlahBarang && !ditemukan) {
+            while (i < stok.size() && !ditemukan) {
                 if (stok[i].getId() == idCari) {
                     cout << "\nBarang ditemukan:\n";
                     stok[i].tampilkanInfo();
@@ -55,19 +54,14 @@ int main() {
             break;
         }
         case 3: { // Tambah barang
-            if (jumlahBarang >= MAX_BARANG) {
-                cout << "Stok penuh! Tidak bisa menambahkan barang baru.\n";
-                break;
-            }
             int id, harga;
             string nama, manufaktur;
             cout << "Masukkan ID: ";
             cin >> id;
 
-            // ✅ Cek ID duplikat
             bool idDuplikat = false;
             int i = 0;
-            while (i < jumlahBarang) {
+            while (i < stok.size()) {
                 if (stok[i].getId() == id) {
                     idDuplikat = true;
                 }
@@ -87,8 +81,7 @@ int main() {
             cout << "Masukkan Harga: ";
             cin >> harga;
 
-            stok[jumlahBarang] = BarangElektronik(id, nama, manufaktur, harga);
-            jumlahBarang++;
+            stok.push_back(BarangElektronik(id, nama, manufaktur, harga));
             cout << "Barang berhasil ditambahkan!\n";
             break;
         }
@@ -98,7 +91,7 @@ int main() {
             cin >> idEdit;
             bool ditemukan = false;
             int i = 0;
-            while (i < jumlahBarang && !ditemukan) {
+            while (i < stok.size() && !ditemukan) {
                 if (stok[i].getId() == idEdit) {
                     int idBaru, harga;
                     string nama, manufaktur;
@@ -106,10 +99,9 @@ int main() {
                     cout << "Masukkan ID baru: ";
                     cin >> idBaru;
 
-                    // ✅ Validasi ID baru agar tidak duplikat
                     bool idDuplikat = false;
                     int k = 0;
-                    while (k < jumlahBarang) {
+                    while (k < stok.size()) {
                         if (k != i && stok[k].getId() == idBaru) {
                             idDuplikat = true;
                         }
@@ -149,18 +141,14 @@ int main() {
             cin >> idHapus;
             bool ditemukan = false;
             int i = 0;
-            while (i < jumlahBarang) {
+            while (i < stok.size()) {
                 if (stok[i].getId() == idHapus) {
-                    int j = i;
-                    while (j < jumlahBarang - 1) {
-                        stok[j] = stok[j + 1];
-                        j++;
-                    }
-                    jumlahBarang--;
+                    stok.erase(stok.begin() + i); // hapus elemen dari vector
                     cout << "Barang berhasil dihapus!\n";
                     ditemukan = true;
+                } else {
+                    i++;
                 }
-                i++;
             }
             if (!ditemukan) {
                 cout << "Barang dengan ID " << idHapus << " tidak ditemukan.\n";

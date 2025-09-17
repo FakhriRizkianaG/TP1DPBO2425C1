@@ -11,11 +11,11 @@ harga(int) harga dari barang tersebut
 
 Ketika program dijalankan akan ada menu seperti berikut
 
-[1] Tampilkan stok yang tersedia (menampilkan setiap data yang ada)
-[2] Cari barang (mencari barang berdasarkan id)
-[3] Tambah barang (menambahkan barang)
-[4] Edit barang (mengedit barang berdasarkan id)
-[5] Hapus barang (menghapus barang berdaarkan id)
-[0] Exit (tampilkan pesan "Have a nice day :D" lalu return 0)
+[1] Tampilkan stok yang tersedia (menampilkan setiap data yang ada)\n
+[2] Cari barang (mencari barang berdasarkan id)\n
+[3] Tambah barang (menambahkan barang)\n
+[4] Edit barang (mengedit barang berdasarkan id)\n
+[5] Hapus barang (menghapus barang berdaarkan id)\n
+[0] Exit (tampilkan pesan "Have a nice day :D" lalu return 0)\n
 
 untuk bahasa C++, Java dan Python dijalankan melalui CLI, tapi untuk PHP dijalankan di web

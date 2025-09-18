@@ -8,10 +8,10 @@ Berorientasi Objek untuk keberkahanNya maka saya tidak<br>
 melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.<br>
 
 
-#Tujuan Program
+# Tujuan Program
 Program ini bertujuan untuk mendata barang-barang/stok yang tersedia di toko elektronik.
 
-#Alur Program
+# Alur Program
 program ini menggunakan kelas yang bernama BarangElektronik dengan atribut sbb:<br>
 id(int) id barang untuk pencarian<br>
 nama(str) nama dari barang<br>
@@ -30,8 +30,11 @@ Ketika program dijalankan akan ada menu seperti berikut
 [5] Hapus barang (menghapus barang berdaarkan id)<br>
 [0] Exit (tampilkan pesan "Have a nice day :D" lalu return 0)<br>
 
-untuk bahasa C++, Java dan Python dijalankan melalui CLI, tapi untuk PHP dijalankan di web
+untuk bahasa C++, Java dan Python dijalankan melalui CLI, tapi untuk PHP dijalankan di web.
 
+<h1>Penjelasan Menu</h1>
+
+# Dokumentasi
 Versi CLI:<br>
 <img width="396" height="226" alt="Screenshot 2025-09-18 203802" src="https://github.com/user-attachments/assets/2ba28e5f-3d9c-4f63-a3d2-7cc505dac82a" />
 <img width="310" height="526" alt="Screenshot 2025-09-18 204038" src="https://github.com/user-attachments/assets/b55c1e30-6abd-405f-81df-027d17a6d6a1" />

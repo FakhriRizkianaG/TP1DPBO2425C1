@@ -17,6 +17,7 @@ id(int) id barang untuk pencarian<br>
 nama(str) nama dari barang<br>
 manufaktur(str) manufaktur atau pabrik yang membuat barang tsb<br>
 harga(int) harga dari barang tersebut<br>
+image(str) untuk menampilkan gambar (php only)
 
 alasan mengapa atribut seperti itu:<br>
 id dan nama cukup jelas, yaitu untuk identifikasi. harga untuk menunjukan kepada pelanggan harganya. untuk manufaktur, bisa berguna bagi pelanggan atau admin/pemilik. bagi admin/pemilik, akan jelas dari mana sebuah barang itu berasal. bagi pelanggan, beberapa orang lebih suka membeli barang dari merek tertentu, ini juga membantu pelanggan untuk menilai kualitas.
@@ -32,7 +33,7 @@ Ketika program dijalankan akan ada menu seperti berikut
 
 untuk bahasa C++, Java dan Python dijalankan melalui CLI, tapi untuk PHP dijalankan di web.
 
-<h1>Penjelasan Menu</h1>
+<h3>Penjelasan Menu</h3>
 
 # Dokumentasi
 Versi CLI:<br>

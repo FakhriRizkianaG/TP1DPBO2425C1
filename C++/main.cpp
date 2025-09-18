@@ -110,6 +110,7 @@ int main() {
 
                     if (idDuplikat) {
                         cout << "Gagal mengubah ID! ID " << idBaru << " sudah digunakan.\n";
+                        break;
                     } else {
                         stok[i].setId(idBaru);
                         cout << "Masukkan Nama baru: ";
@@ -132,6 +133,7 @@ int main() {
             }
             if (!ditemukan) {
                 cout << "Barang dengan ID " << idEdit << " tidak ditemukan.\n";
+                break;
             }
             break;
         }
